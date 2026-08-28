@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор идей для постов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --card: #fffdf9;
+      --line: #e7e0d6;
+      --accent: #c2410c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Manrope", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 18px 40px rgba(28, 25, 23, 0.06);
+    }
+
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: item;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    li {
+      counter-increment: item;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: var(--muted);
+      padding: 14px 16px;
+      background: var(--bg);
+      border-radius: 12px;
+    }
+
+    li::before {
+      content: counter(item);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Manrope", system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 999px;
+      position: relative;
+      top: 1px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Генератор идей для постов</h1>
+    <ol>
+      <li>Пять идей постов из трёх пунктов</li>
+      <li>Пять идей постов для экспертов</li>
+      <li>Три идеи stories на сегодня</li>
+      <li>Контент-план на неделю</li>
+      <li>Мотивация дня</li>
+    </ol>
+  </main>
+</body>
+</html>
